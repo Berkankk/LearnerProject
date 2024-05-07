@@ -1,0 +1,19 @@
+﻿@model LearnerProject.Models.Entities.Message
+@{
+    ViewBag.Title = "MessageDetail";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="card-body">
+    <h3>Mesaj Detayı</h3>
+    <br />
+    <p><strong>Ad Soyad:</strong> @Model.NameSurname</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Mesaj Konusu:</strong> @Model.Subject</p>
+    <p><strong>Mesaj İçeriği:</strong> @Model.MessageContent</p>
+
+</div>
+
+<br />
+<a href="/AdminSendMessage/IsRead/@Model.MessageId" class="btn btn-outline-info">Okundu olarak işaretle</a>
+

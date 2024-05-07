@@ -1,0 +1,24 @@
+﻿@model LearnerProject.Models.Entities.Classroom
+@{
+    ViewBag.Title = "UpdateClassroom";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h3>Sınıf Güncelleme Sayfası</h3>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ClassroomId)
+    <label>Sınıf Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Lütfen geçerli bir sınıf adı giriniz" })
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control", @placeholder = "Lütfen geçerli bir icon giriniz" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control", @placeholder = "Lütfen geçerli bir sınıf açıklaması giriniz" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
+

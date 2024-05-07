@@ -1,0 +1,23 @@
+﻿@model LearnerProject.Models.Entities.Classroom
+@{
+    ViewBag.Title = "AddClassroom";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h2>Sınıf Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Sınıf Adı</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", @placeholder = "Lütfen geçerli bir sınıf adı giriniz" })
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control", @placeholder = "Lütfen geçerli bir icon giriniz" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control", @placeholder = "Lütfen geçerli bir sınıf açıklaması giriniz" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
+

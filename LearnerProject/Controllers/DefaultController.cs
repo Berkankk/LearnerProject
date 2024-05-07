@@ -30,5 +30,40 @@ namespace LearnerProject.Controllers
             ViewBag.review = reviewList;
             return View(values);
         }
+        public PartialViewResult DefaultCategoryPartiaal()
+        {
+            ViewBag.v1 = context.Courses.Where(x => x.Category.CategoryName == "Kodlama").Count();  // kategori adı kodlama olan kursların sayısı
+
+
+            var values = context.Categories.Where(x => x.Status == true).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultTestimonialPartial()
+        {
+            var value = context.Testimonials.ToList();
+            return PartialView(value);
+        }
+        public PartialViewResult DefaultClassroomPartial()
+        {
+            var values = context.Classrooms.OrderByDescending(x => x.ClassroomId).Take(6).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultTeacherPartial()
+        {
+            var values = context.Teachers.OrderByDescending(x => x.TeacherId).Take(6).ToList();
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultFAQPartial()
+        {
+           
+            var values = context.FAQs.Where(x=>x.Status==true).OrderByDescending(x=>x.FAQId).Take(6).ToList();
+
+            return PartialView(values);
+        }
+        public PartialViewResult DefaultAboutPartial()
+        {
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
     }
 }

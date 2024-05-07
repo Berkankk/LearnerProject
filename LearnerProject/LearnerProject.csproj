@@ -127,14 +127,24 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminClassroomController.cs" />
+    <Compile Include="Controllers\AdminContactController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\AdminLoginController.cs" />
+    <Compile Include="Controllers\AdminProfileController.cs" />
+    <Compile Include="Controllers\AdminSendMessageController.cs" />
+    <Compile Include="Controllers\AllCourseController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\CourseRegisterController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\FAQController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
     <Compile Include="Controllers\StudentCourseController.cs" />
     <Compile Include="Controllers\StudentLayoutController.cs" />
     <Compile Include="Controllers\StudentLoginController.cs" />
@@ -142,6 +152,7 @@
     <Compile Include="Controllers\TeacherCourseController.cs" />
     <Compile Include="Controllers\TeacherLayoutController.cs" />
     <Compile Include="Controllers\TeacherLoginController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -166,10 +177,15 @@
     <Compile Include="Migrations\202404191859014_mig_contact_and_message_table_added.designer.cs">
       <DependentUpon>202404191859014_mig_contact_and_message_table_added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202405062252139_admin.cs" />
+    <Compile Include="Migrations\202405062252139_admin.designer.cs">
+      <DependentUpon>202405062252139_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\CourseReviewViewModel.cs" />
     <Compile Include="Models\Entities\About.cs" />
+    <Compile Include="Models\Entities\Admin.cs" />
     <Compile Include="Models\Entities\Banner.cs" />
     <Compile Include="Models\Entities\Category.cs" />
     <Compile Include="Models\Entities\Classroom.cs" />
@@ -532,9 +548,42 @@
     <Content Include="Views\StudentCourse\Index.cshtml" />
     <Content Include="Views\StudentCourse\MyCourseList.cshtml" />
     <Content Include="Views\StudentRegister\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\AdminClassroom\Index.cshtml" />
+    <Content Include="Views\AdminClassroom\AddClassroom.cshtml" />
+    <Content Include="Views\AdminClassroom\UpdateClassroom.cshtml" />
+    <Content Include="Views\AdminContact\Index.cshtml" />
+    <Content Include="Views\FAQ\Index.cshtml" />
+    <Content Include="Views\FAQ\AddFAQ.cshtml" />
+    <Content Include="Views\FAQ\UpdateFAQ.cshtml" />
+    <Content Include="Views\Banner\Index.cshtml" />
+    <Content Include="Views\Banner\AddBanner.cshtml" />
+    <Content Include="Views\Banner\UpdateBanner.cshtml" />
+    <Content Include="Views\AdminSendMessage\Index.cshtml" />
+    <Content Include="Views\AdminSendMessage\MessageDetail.cshtml" />
+    <Content Include="Views\AdminContact\AddContact.cshtml" />
+    <Content Include="Views\AdminContact\UpdateContact.cshtml" />
+    <Content Include="Views\Default\DefaultCategoryPartiaal.cshtml" />
+    <Content Include="Views\Default\DefaultTestimonialPartial.cshtml" />
+    <Content Include="Views\Default\DefaultClassroomPartial.cshtml" />
+    <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
+    <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
+    <Content Include="Views\Default\DefaultAboutPartial.cshtml" />
+    <Content Include="Views\AdminProfile\Index.cshtml" />
+    <Content Include="Views\AdminProfile\AddProfile.cshtml" />
+    <Content Include="Views\AdminProfile\UpdateProfile.cshtml" />
+    <Content Include="Views\AllCourse\Index.cshtml" />
+    <Content Include="Views\AllCourse\CourseInfo.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Review\AddReview.cshtml" />
+    <Content Include="Views\Review\UpdateReview.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AdminLogin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -578,6 +627,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202404191859014_mig_contact_and_message_table_added.resx">
       <DependentUpon>202404191859014_mig_contact_and_message_table_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202405062252139_admin.resx">
+      <DependentUpon>202405062252139_admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

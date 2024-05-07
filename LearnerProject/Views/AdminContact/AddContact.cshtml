@@ -1,0 +1,26 @@
+﻿@model LearnerProject.Models.Entities.Contact
+@{
+    ViewBag.Title = "AddContact";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h2>Yeni İletişim Bilgisi Ekleme Formu</h2>
+
+<form method="post">
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control", @placeholder = "Lütfen geçerli bir adres giriniz" })
+    <br />
+    <label>Müsait Zaman</label>
+    @Html.TextBoxFor(x => x.OpenHours, new { @class = "form-control", @placeholder = "Lütfen geçerli bir bilgi giriniz" })
+    <br />
+    <label>Email</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @placeholder = "Lütfen geçerli bir mail giriniz" })
+    <br />
+    <label>Phone</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "Lütfen geçerli bir telefon numarası giriniz" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
+

@@ -1,0 +1,27 @@
+﻿@model LearnerProject.Models.Entities.Admin
+@{
+    ViewBag.Title = "UpdateProfile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h2>Yeni Profil Güncelleme </h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.AdminId)
+    <label>Profil Resmi</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @placeholder = "Lütfen geçerli bir resim giriniz" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control", @placeholder = "Lütfen ad soyad giriniz" })
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @placeholder = "Lütfen geçerli bir kullanıcı adı (Name0001) giriniz" })
+    <br />
+    <label>Şifre</label>
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @placeholder = "şifre: en az 8 karakter olup en az bir büyük harf, bir küçük harf, rakam ve noktalama işareti barındırmalı" })
+    <br />
+
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
+
